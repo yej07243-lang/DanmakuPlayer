@@ -1,6 +1,6 @@
 # 安装与恢复
 
-DanmakuPlayer 0.1.0（构建 3）是本地验证包。三轮完整验收、Developer ID 签名、公证与依赖发布核对尚未全部完成。
+DanmakuPlayer 0.1.0（原版构建 9）。公开发行副本正进行签名、公证与安装核验；当前状态见 [RELEASE_STATUS.md](RELEASE_STATUS.md)。源码以 GPL-3.0-or-later 开源。三轮完整验收不能由若干自动回归代替。
 
 ## 安装
 

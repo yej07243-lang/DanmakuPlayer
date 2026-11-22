@@ -1,0 +1,429 @@
+[
+  {
+    "name": "freetype",
+    "source": "freetype",
+    "system": "configure",
+    "sourceSubdirectory": ".",
+    "options": [
+      "--prefix=$prefix",
+      "--host=$HOST_TRIPLE",
+      "--enable-shared",
+      "--disable-static",
+      "--without-harfbuzz",
+      "--without-png",
+      "--without-brotli",
+      "--without-bzip2",
+      "--with-zlib"
+    ]
+  },
+  {
+    "name": "fribidi",
+    "source": "fribidi",
+    "system": "meson",
+    "sourceSubdirectory": ".",
+    "options": [
+      "-Ddocs=false",
+      "-Dtests=false"
+    ]
+  },
+  {
+    "name": "libunibreak",
+    "source": "libunibreak",
+    "system": "configure",
+    "sourceSubdirectory": ".",
+    "options": [
+      "--prefix=$prefix",
+      "--host=$HOST_TRIPLE",
+      "--enable-shared",
+      "--disable-static"
+    ]
+  },
+  {
+    "name": "luajit",
+    "source": "luajit",
+    "system": "make",
+    "sourceSubdirectory": ".",
+    "options": []
+  },
+  {
+    "name": "mujs",
+    "source": "mujs",
+    "system": "make",
+    "sourceSubdirectory": ".",
+    "options": []
+  },
+  {
+    "name": "uchardet",
+    "source": "uchardet",
+    "system": "cmake",
+    "sourceSubdirectory": ".",
+    "options": [
+      "-DBUILD_STATIC=OFF",
+      "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+    ]
+  },
+  {
+    "name": "little-cms2",
+    "source": "little_cms2",
+    "system": "configure",
+    "sourceSubdirectory": ".",
+    "options": [
+      "--prefix=$prefix",
+      "--host=$HOST_TRIPLE",
+      "--enable-shared",
+      "--disable-static",
+      "--without-jpeg",
+      "--without-tiff",
+      "--without-zlib"
+    ]
+  },
+  {
+    "name": "libudfread",
+    "source": "libudfread",
+    "system": "meson",
+    "sourceSubdirectory": ".",
+    "options": [
+      "-Denable_examples=false"
+    ]
+  },
+  {
+    "name": "lz4",
+    "source": "lz4",
+    "system": "cmake",
+    "sourceSubdirectory": "build/cmake",
+    "options": [
+      "-DLZ4_BUILD_CLI=OFF",
+      "-DLZ4_BUILD_LEGACY_LZ4C=OFF"
+    ]
+  },
+  {
+    "name": "zstd",
+    "source": "zstd",
+    "system": "cmake",
+    "sourceSubdirectory": "build/cmake",
+    "options": [
+      "-DZSTD_BUILD_PROGRAMS=OFF",
+      "-DZSTD_BUILD_TESTS=OFF",
+      "-DZSTD_BUILD_STATIC=OFF",
+      "-DZSTD_BUILD_SHARED=ON"
+    ]
+  },
+  {
+    "name": "zimg",
+    "source": "zimg",
+    "system": "configure",
+    "sourceSubdirectory": ".",
+    "options": [
+      "--prefix=$prefix",
+      "--host=$HOST_TRIPLE",
+      "--enable-shared",
+      "--disable-static"
+    ]
+  },
+  {
+    "name": "libbs2b",
+    "source": "libbs2b",
+    "system": "configure",
+    "sourceSubdirectory": ".",
+    "options": [
+      "--prefix=$prefix",
+      "--host=$HOST_TRIPLE",
+      "--enable-shared",
+      "--disable-static"
+    ]
+  },
+  {
+    "name": "libsoxr",
+    "source": "libsoxr",
+    "system": "cmake",
+    "sourceSubdirectory": ".",
+    "options": [
+      "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
+      "-DBUILD_TESTS=OFF",
+      "-DBUILD_EXAMPLES=OFF",
+      "-DWITH_OPENMP=OFF",
+      "-DWITH_LSR_BINDINGS=OFF"
+    ]
+  },
+  {
+    "name": "jpeg-turbo",
+    "source": "jpeg_turbo",
+    "system": "cmake",
+    "sourceSubdirectory": ".",
+    "options": [
+      "-DENABLE_SHARED=ON",
+      "-DENABLE_STATIC=OFF",
+      "-DWITH_TURBOJPEG=OFF",
+      "-DCMAKE_INSTALL_DEFAULT_LIBDIR=lib"
+    ]
+  },
+  {
+    "name": "libwebp",
+    "source": "libwebp",
+    "system": "cmake",
+    "sourceSubdirectory": ".",
+    "options": [
+      "-DWEBP_BUILD_ANIM_UTILS=OFF",
+      "-DWEBP_BUILD_CWEBP=OFF",
+      "-DWEBP_BUILD_DWEBP=OFF",
+      "-DWEBP_BUILD_GIF2WEBP=OFF",
+      "-DWEBP_BUILD_IMG2WEBP=OFF",
+      "-DWEBP_BUILD_VWEBP=OFF",
+      "-DWEBP_BUILD_WEBPINFO=OFF",
+      "-DWEBP_BUILD_WEBPMUX=OFF",
+      "-DWEBP_BUILD_EXTRAS=OFF"
+    ]
+  },
+  {
+    "name": "svt-av1",
+    "source": "svt_av1",
+    "system": "cmake",
+    "sourceSubdirectory": ".",
+    "options": [
+      "-DBUILD_APPS=OFF",
+      "-DBUILD_TESTING=OFF"
+    ]
+  },
+  {
+    "name": "libjxl",
+    "source": "libjxl",
+    "system": "cmake",
+    "sourceSubdirectory": ".",
+    "options": [
+      "-DJPEGXL_ENABLE_TOOLS=OFF",
+      "-DJPEGXL_ENABLE_JPEGLI=OFF",
+      "-DJPEGXL_ENABLE_DEVTOOLS=OFF",
+      "-DJPEGXL_ENABLE_EXAMPLES=OFF",
+      "-DJPEGXL_ENABLE_BENCHMARK=OFF",
+      "-DJPEGXL_ENABLE_FUZZERS=OFF",
+      "-DJPEGXL_ENABLE_MANPAGES=OFF",
+      "-DJPEGXL_ENABLE_DOXYGEN=OFF",
+      "-DJPEGXL_ENABLE_JNI=OFF",
+      "-DJPEGXL_ENABLE_SKCMS=OFF",
+      "-DJPEGXL_ENABLE_OPENEXR=OFF",
+      "-DJPEGXL_ENABLE_TRANSCODE_JPEG=OFF",
+      "-DBUILD_TESTING=OFF",
+      "-DCMAKE_CXX_STANDARD=17"
+    ]
+  },
+  {
+    "name": "dav1d",
+    "source": "dav1d",
+    "system": "meson",
+    "sourceSubdirectory": ".",
+    "options": [
+      "-Denable_tools=false",
+      "-Denable_tests=false",
+      "-Denable_examples=false"
+    ]
+  },
+  {
+    "name": "speex",
+    "source": "speex",
+    "system": "configure",
+    "sourceSubdirectory": ".",
+    "options": [
+      "--prefix=$prefix",
+      "--host=$HOST_TRIPLE",
+      "--enable-shared",
+      "--disable-static",
+      "--disable-ogg"
+    ]
+  },
+  {
+    "name": "libogg",
+    "source": "libogg",
+    "system": "configure",
+    "sourceSubdirectory": ".",
+    "options": [
+      "--prefix=$prefix",
+      "--host=$HOST_TRIPLE",
+      "--enable-shared",
+      "--disable-static"
+    ]
+  },
+  {
+    "name": "libvorbis",
+    "source": "libvorbis",
+    "system": "configure",
+    "sourceSubdirectory": ".",
+    "options": [
+      "--prefix=$prefix",
+      "--host=$HOST_TRIPLE",
+      "--enable-shared",
+      "--disable-static"
+    ]
+  },
+  {
+    "name": "harfbuzz",
+    "source": "harfbuzz",
+    "system": "meson",
+    "sourceSubdirectory": ".",
+    "options": [
+      "-Dtests=disabled",
+      "-Dbenchmark=disabled",
+      "-Ddocs=disabled",
+      "-Dintrospection=disabled",
+      "-Dfreetype=enabled",
+      "-Dcoretext=enabled",
+      "-Dglib=disabled",
+      "-Dgobject=disabled",
+      "-Dicu=disabled"
+    ]
+  },
+  {
+    "name": "fontconfig",
+    "source": "fontconfig",
+    "system": "meson",
+    "sourceSubdirectory": ".",
+    "options": [
+      "-Dcache-build=disabled",
+      "-Dtests=disabled",
+      "-Dtools=disabled",
+      "-Ddoc=disabled",
+      "-Dnls=disabled"
+    ]
+  },
+  {
+    "name": "libarchive",
+    "source": "libarchive",
+    "system": "cmake",
+    "sourceSubdirectory": ".",
+    "options": [
+      "-DENABLE_TEST=OFF",
+      "-DENABLE_INSTALL=ON",
+      "-DENABLE_OPENSSL=OFF",
+      "-DENABLE_LIBB2=OFF",
+      "-DENABLE_LZO=OFF",
+      "-DENABLE_LZ4=ON",
+      "-DENABLE_ZSTD=ON",
+      "-DENABLE_ZLIB=ON",
+      "-DENABLE_BZip2=OFF",
+      "-DENABLE_LIBXML2=OFF",
+      "-DENABLE_EXPAT=OFF",
+      "-DCMAKE_PREFIX_PATH=$prefix"
+    ]
+  },
+  {
+    "name": "rubberband",
+    "source": "rubberband",
+    "system": "meson",
+    "sourceSubdirectory": ".",
+    "options": [
+      "-Dfft=vdsp",
+      "-Dresampler=builtin",
+      "-Dcmdline=disabled"
+    ]
+  },
+  {
+    "name": "libbluray",
+    "source": "libbluray",
+    "system": "meson",
+    "sourceSubdirectory": ".",
+    "options": [
+      "-Dbdj_jar=disabled",
+      "-Denable_tools=false",
+      "-Denable_examples=false",
+      "-Denable_devtools=false",
+      "-Dlibxml2=disabled"
+    ]
+  },
+  {
+    "name": "libplacebo",
+    "source": "libplacebo",
+    "system": "meson",
+    "sourceSubdirectory": ".",
+    "options": [
+      "-Dvulkan=disabled",
+      "-Dopengl=enabled",
+      "-Dd3d11=disabled",
+      "-Ddemos=false",
+      "-Dtests=false",
+      "-Dshaderc=disabled",
+      "-Dglslang=disabled",
+      "-Dlcms=enabled"
+    ]
+  },
+  {
+    "name": "libass",
+    "source": "libass",
+    "system": "configure",
+    "sourceSubdirectory": ".",
+    "options": [
+      "--prefix=$prefix",
+      "--host=$HOST_TRIPLE",
+      "--enable-shared",
+      "--disable-static",
+      "--enable-fontconfig",
+      "--disable-libtool-lock"
+    ]
+  },
+  {
+    "name": "ffmpeg",
+    "source": "ffmpeg",
+    "system": "configure",
+    "sourceSubdirectory": ".",
+    "options": [
+      "--prefix=$prefix",
+      "--arch=${arch}",
+      "--target-os=darwin",
+      "--cc=clang",
+      "--cxx=clang++",
+      "--extra-cflags=${CFLAGS} -I${prefix}/include",
+      "--extra-ldflags=${LDFLAGS} -L${prefix}/lib",
+      "--pkg-config=pkg-config",
+      "--enable-gpl",
+      "--enable-shared",
+      "--disable-static",
+      "--disable-programs",
+      "--disable-doc",
+      "--disable-debug",
+      "--enable-network",
+      "--enable-securetransport",
+      "--enable-videotoolbox",
+      "--enable-audiotoolbox",
+      "--enable-libspeex",
+      "--enable-libvorbis",
+      "--enable-libdav1d",
+      "--enable-libass",
+      "--enable-libwebp",
+      "--enable-libjxl",
+      "--enable-libsvtav1",
+      "--enable-libbs2b",
+      "--enable-libsoxr",
+      "--enable-librubberband",
+      "--enable-libzimg",
+      "--enable-libfontconfig",
+      "--enable-libfreetype",
+      "--enable-libfribidi",
+      "--enable-libharfbuzz"
+    ]
+  },
+  {
+    "name": "mpv",
+    "source": "mpv",
+    "system": "meson",
+    "sourceSubdirectory": ".",
+    "options": [
+      "-Dlibmpv=true",
+      "-Dcplayer=false",
+      "-Dmacos-cocoa-cb=disabled",
+      "-Dmacos-touchbar=disabled",
+      "-Dmacos-media-player=disabled",
+      "-Dmanpage-build=disabled",
+      "-Dtests=false",
+      "-Dlua=luajit",
+      "-Djavascript=enabled",
+      "-Dlcms2=enabled",
+      "-Dvulkan=disabled",
+      "-Dgl=enabled",
+      "-Dzimg=enabled",
+      "-Dlibbluray=enabled",
+      "-Dlibarchive=enabled",
+      "-Duchardet=enabled",
+      "-Djpeg=enabled",
+      "-Drubberband=enabled",
+      "-Dswift-flags=-target ${arch}-apple-macosx${MACOSX_DEPLOYMENT_TARGET}"
+    ]
+  }
+]

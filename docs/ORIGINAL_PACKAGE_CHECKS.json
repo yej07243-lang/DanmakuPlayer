@@ -1,0 +1,686 @@
+{
+  "build": "9",
+  "coreRegressions": [
+    {
+      "run": 11,
+      "elapsedSeconds": 45.2853889465332,
+      "checks": [
+        {
+          "name": "import",
+          "passed": true
+        },
+        {
+          "name": "video-thumbnail",
+          "passed": true
+        },
+        {
+          "name": "rescan-preserves-edit-and-id",
+          "passed": true
+        },
+        {
+          "name": "xml-100-comments-per-second",
+          "passed": true
+        },
+        {
+          "name": "bili-link-and-pages",
+          "passed": true
+        },
+        {
+          "name": "bili-real-segment",
+          "passed": true
+        },
+        {
+          "name": "bili-cache",
+          "passed": true
+        },
+        {
+          "name": "bili-keyword-search",
+          "passed": true
+        },
+        {
+          "name": "libmpv-open-and-render",
+          "passed": true
+        },
+        {
+          "name": "playing-prevents-idle-sleep",
+          "passed": true
+        },
+        {
+          "name": "multiple-audio-tracks",
+          "passed": true
+        },
+        {
+          "name": "pause",
+          "passed": true
+        },
+        {
+          "name": "pause-releases-idle-sleep",
+          "passed": true
+        },
+        {
+          "name": "seek",
+          "passed": true
+        },
+        {
+          "name": "rate",
+          "passed": true
+        },
+        {
+          "name": "audio-selection",
+          "passed": true
+        },
+        {
+          "name": "ass-external-subtitle",
+          "passed": true
+        },
+        {
+          "name": "piecewise-calibration",
+          "passed": true
+        },
+        {
+          "name": "saved-progress",
+          "passed": true
+        },
+        {
+          "name": "close-releases-idle-sleep",
+          "passed": true
+        },
+        {
+          "name": "close-and-reopen",
+          "passed": true
+        },
+        {
+          "name": "resume-position",
+          "passed": true
+        },
+        {
+          "name": "xml-wins-pending-network",
+          "passed": true
+        },
+        {
+          "name": "local-replacement-clears-spinner",
+          "passed": true
+        },
+        {
+          "name": "remove-closes-active-player",
+          "passed": true
+        },
+        {
+          "name": "remove-deletes-record",
+          "passed": true
+        },
+        {
+          "name": "closed-player-cannot-resurrect-row",
+          "passed": true
+        },
+        {
+          "name": "persistence-failure-reported",
+          "passed": true
+        },
+        {
+          "name": "continuous-playback",
+          "passed": true
+        },
+        {
+          "name": "duration-completed",
+          "passed": true
+        },
+        {
+          "name": "database-reopen-progress",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "run": 12,
+      "elapsedSeconds": 45.387966990470886,
+      "checks": [
+        {
+          "name": "import",
+          "passed": true
+        },
+        {
+          "name": "video-thumbnail",
+          "passed": true
+        },
+        {
+          "name": "rescan-preserves-edit-and-id",
+          "passed": true
+        },
+        {
+          "name": "xml-100-comments-per-second",
+          "passed": true
+        },
+        {
+          "name": "bili-link-and-pages",
+          "passed": true
+        },
+        {
+          "name": "bili-real-segment",
+          "passed": true
+        },
+        {
+          "name": "bili-cache",
+          "passed": true
+        },
+        {
+          "name": "bili-keyword-search",
+          "passed": true
+        },
+        {
+          "name": "libmpv-open-and-render",
+          "passed": true
+        },
+        {
+          "name": "playing-prevents-idle-sleep",
+          "passed": true
+        },
+        {
+          "name": "multiple-audio-tracks",
+          "passed": true
+        },
+        {
+          "name": "pause",
+          "passed": true
+        },
+        {
+          "name": "pause-releases-idle-sleep",
+          "passed": true
+        },
+        {
+          "name": "seek",
+          "passed": true
+        },
+        {
+          "name": "rate",
+          "passed": true
+        },
+        {
+          "name": "audio-selection",
+          "passed": true
+        },
+        {
+          "name": "ass-external-subtitle",
+          "passed": true
+        },
+        {
+          "name": "piecewise-calibration",
+          "passed": true
+        },
+        {
+          "name": "saved-progress",
+          "passed": true
+        },
+        {
+          "name": "close-releases-idle-sleep",
+          "passed": true
+        },
+        {
+          "name": "close-and-reopen",
+          "passed": true
+        },
+        {
+          "name": "resume-position",
+          "passed": true
+        },
+        {
+          "name": "xml-wins-pending-network",
+          "passed": true
+        },
+        {
+          "name": "local-replacement-clears-spinner",
+          "passed": true
+        },
+        {
+          "name": "remove-closes-active-player",
+          "passed": true
+        },
+        {
+          "name": "remove-deletes-record",
+          "passed": true
+        },
+        {
+          "name": "closed-player-cannot-resurrect-row",
+          "passed": true
+        },
+        {
+          "name": "persistence-failure-reported",
+          "passed": true
+        },
+        {
+          "name": "continuous-playback",
+          "passed": true
+        },
+        {
+          "name": "duration-completed",
+          "passed": true
+        },
+        {
+          "name": "database-reopen-progress",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "run": 13,
+      "elapsedSeconds": 45.41233503818512,
+      "checks": [
+        {
+          "name": "import",
+          "passed": true
+        },
+        {
+          "name": "video-thumbnail",
+          "passed": true
+        },
+        {
+          "name": "rescan-preserves-edit-and-id",
+          "passed": true
+        },
+        {
+          "name": "xml-100-comments-per-second",
+          "passed": true
+        },
+        {
+          "name": "bili-link-and-pages",
+          "passed": true
+        },
+        {
+          "name": "bili-real-segment",
+          "passed": true
+        },
+        {
+          "name": "bili-cache",
+          "passed": true
+        },
+        {
+          "name": "bili-keyword-search",
+          "passed": true
+        },
+        {
+          "name": "libmpv-open-and-render",
+          "passed": true
+        },
+        {
+          "name": "playing-prevents-idle-sleep",
+          "passed": true
+        },
+        {
+          "name": "multiple-audio-tracks",
+          "passed": true
+        },
+        {
+          "name": "pause",
+          "passed": true
+        },
+        {
+          "name": "pause-releases-idle-sleep",
+          "passed": true
+        },
+        {
+          "name": "seek",
+          "passed": true
+        },
+        {
+          "name": "rate",
+          "passed": true
+        },
+        {
+          "name": "audio-selection",
+          "passed": true
+        },
+        {
+          "name": "ass-external-subtitle",
+          "passed": true
+        },
+        {
+          "name": "piecewise-calibration",
+          "passed": true
+        },
+        {
+          "name": "saved-progress",
+          "passed": true
+        },
+        {
+          "name": "close-releases-idle-sleep",
+          "passed": true
+        },
+        {
+          "name": "close-and-reopen",
+          "passed": true
+        },
+        {
+          "name": "resume-position",
+          "passed": true
+        },
+        {
+          "name": "xml-wins-pending-network",
+          "passed": true
+        },
+        {
+          "name": "local-replacement-clears-spinner",
+          "passed": true
+        },
+        {
+          "name": "remove-closes-active-player",
+          "passed": true
+        },
+        {
+          "name": "remove-deletes-record",
+          "passed": true
+        },
+        {
+          "name": "closed-player-cannot-resurrect-row",
+          "passed": true
+        },
+        {
+          "name": "persistence-failure-reported",
+          "passed": true
+        },
+        {
+          "name": "continuous-playback",
+          "passed": true
+        },
+        {
+          "name": "duration-completed",
+          "passed": true
+        },
+        {
+          "name": "database-reopen-progress",
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "formatChecks": [
+    {
+      "run": 21,
+      "checks": [
+        {
+          "name": "import",
+          "passed": true
+        },
+        {
+          "name": "rescan-preserves-edit-and-id",
+          "passed": true
+        },
+        {
+          "name": "xml-100-comments-per-second",
+          "passed": true
+        },
+        {
+          "name": "format-playback",
+          "passed": true
+        }
+      ],
+      "metrics": [
+        {
+          "dropped": 1,
+          "elapsed": 0.37133193016052246,
+          "hwdec": "videotoolbox",
+          "position": 0.033
+        },
+        {
+          "dropped": 6,
+          "elapsed": 2.00055992603302,
+          "hwdec": "videotoolbox",
+          "position": 1.7
+        },
+        {
+          "dropped": 6,
+          "elapsed": 4.000798940658569,
+          "hwdec": "videotoolbox",
+          "position": 3.6670000000000003
+        },
+        {
+          "dropped": 6,
+          "elapsed": 6.001001000404358,
+          "hwdec": "videotoolbox",
+          "position": 5.7
+        }
+      ]
+    },
+    {
+      "run": 22,
+      "checks": [
+        {
+          "name": "import",
+          "passed": true
+        },
+        {
+          "name": "rescan-preserves-edit-and-id",
+          "passed": true
+        },
+        {
+          "name": "xml-100-comments-per-second",
+          "passed": true
+        },
+        {
+          "name": "format-playback",
+          "passed": true
+        }
+      ],
+      "metrics": [
+        {
+          "dropped": 1,
+          "elapsed": 0.3234269618988037,
+          "hwdec": "videotoolbox",
+          "position": 0.03333333333333333
+        },
+        {
+          "dropped": 5,
+          "elapsed": 2.0002070665359497,
+          "hwdec": "videotoolbox",
+          "position": 1.8333333333333333
+        },
+        {
+          "dropped": 5,
+          "elapsed": 4.000179052352905,
+          "hwdec": "videotoolbox",
+          "position": 3.8333333333333335
+        },
+        {
+          "dropped": 5,
+          "elapsed": 6.000213980674744,
+          "hwdec": "videotoolbox",
+          "position": 5.833333333333333
+        }
+      ]
+    },
+    {
+      "run": 23,
+      "checks": [
+        {
+          "name": "import",
+          "passed": true
+        },
+        {
+          "name": "rescan-preserves-edit-and-id",
+          "passed": true
+        },
+        {
+          "name": "xml-100-comments-per-second",
+          "passed": true
+        },
+        {
+          "name": "format-playback",
+          "passed": true
+        }
+      ],
+      "metrics": [
+        {
+          "dropped": 1,
+          "elapsed": 0.33043599128723145,
+          "hwdec": "videotoolbox",
+          "position": 0
+        },
+        {
+          "dropped": 4,
+          "elapsed": 2.0004940032958984,
+          "hwdec": "videotoolbox",
+          "position": 1.7999999999999998
+        },
+        {
+          "dropped": 4,
+          "elapsed": 4.000670075416565,
+          "hwdec": "videotoolbox",
+          "position": 3.8
+        },
+        {
+          "dropped": 4,
+          "elapsed": 6.000653028488159,
+          "hwdec": "videotoolbox",
+          "position": 5.8
+        }
+      ]
+    },
+    {
+      "run": 24,
+      "checks": [
+        {
+          "name": "import",
+          "passed": true
+        },
+        {
+          "name": "rescan-preserves-edit-and-id",
+          "passed": true
+        },
+        {
+          "name": "xml-100-comments-per-second",
+          "passed": true
+        },
+        {
+          "name": "format-playback",
+          "passed": true
+        }
+      ],
+      "metrics": [
+        {
+          "dropped": 1,
+          "elapsed": 0.33251798152923584,
+          "hwdec": "no",
+          "position": 0
+        },
+        {
+          "dropped": 1,
+          "elapsed": 2.0005799531936646,
+          "hwdec": "no",
+          "position": 1.7
+        },
+        {
+          "dropped": 1,
+          "elapsed": 4.0015469789505005,
+          "hwdec": "no",
+          "position": 3.6999999999999997
+        },
+        {
+          "dropped": 1,
+          "elapsed": 6.00057590007782,
+          "hwdec": "no",
+          "position": 5.7
+        }
+      ]
+    },
+    {
+      "run": 25,
+      "checks": [
+        {
+          "name": "import",
+          "passed": true
+        },
+        {
+          "name": "rescan-preserves-edit-and-id",
+          "passed": true
+        },
+        {
+          "name": "xml-100-comments-per-second",
+          "passed": true
+        },
+        {
+          "name": "format-playback",
+          "passed": true
+        }
+      ],
+      "metrics": [
+        {
+          "dropped": 0,
+          "elapsed": 0.12615299224853516,
+          "hwdec": "videotoolbox",
+          "position": 0.03333333333333333
+        },
+        {
+          "dropped": 0,
+          "elapsed": 2.0010340213775635,
+          "hwdec": "videotoolbox",
+          "position": 1.8666666666666667
+        },
+        {
+          "dropped": 0,
+          "elapsed": 4.001052975654602,
+          "hwdec": "videotoolbox",
+          "position": 3.8666666666666667
+        },
+        {
+          "dropped": 0,
+          "elapsed": 6.000131011009216,
+          "hwdec": "videotoolbox",
+          "position": 5.866666666666666
+        }
+      ]
+    },
+    {
+      "run": 26,
+      "checks": [
+        {
+          "name": "import",
+          "passed": true
+        },
+        {
+          "name": "rescan-preserves-edit-and-id",
+          "passed": true
+        },
+        {
+          "name": "xml-100-comments-per-second",
+          "passed": true
+        },
+        {
+          "name": "corrupt-file-reported",
+          "passed": true
+        },
+        {
+          "name": "engine-error-dismissal-persists",
+          "passed": true
+        }
+      ],
+      "metrics": [
+        {
+          "dropped": 0,
+          "elapsed": 0.11851298809051514,
+          "hwdec": "",
+          "position": 0
+        },
+        {
+          "dropped": 0,
+          "elapsed": 2.001001000404358,
+          "hwdec": "",
+          "position": 0
+        },
+        {
+          "dropped": 0,
+          "elapsed": 4.001057028770447,
+          "hwdec": "",
+          "position": 0
+        },
+        {
+          "dropped": 0,
+          "elapsed": 6.001075029373169,
+          "hwdec": "",
+          "position": 0
+        }
+      ]
+    }
+  ],
+  "threeFullAcceptanceRounds": false,
+  "notarization": "uploaded-processing",
+  "installedUserAppChanged": false
+}
