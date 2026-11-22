@@ -1,0 +1,677 @@
+{
+  "build": 9,
+  "files": [
+    {
+      "file": ".gitignore",
+      "kind": "file",
+      "bytes": 43,
+      "sha256": "7d820f61be121d5416909f53c55d677b4b001815ce5b376d434e9fa11ead1dee"
+    },
+    {
+      "file": "DESIGN.md",
+      "kind": "file",
+      "bytes": 6665,
+      "sha256": "dbc79cbc12416aba163ffdd541f0e795cdde6d76b203939c5571cd411676d49b"
+    },
+    {
+      "file": "LICENSE",
+      "kind": "file",
+      "bytes": 306,
+      "sha256": "50c5df322b4e1dbda19e60a06b24506885d8675e618d623c622639b9a099dc31"
+    },
+    {
+      "file": "PRODUCT.md",
+      "kind": "file",
+      "bytes": 856,
+      "sha256": "442ace2b4f35e8964b5a8fdc49be6679bee094b153165dad4a2c56bee33ddebb"
+    },
+    {
+      "file": "Package.swift",
+      "kind": "file",
+      "bytes": 982,
+      "sha256": "4d3c1a9e8319438755e5a4999cd556eac9a98d218c46a90d46fca9ee4ea38465"
+    },
+    {
+      "file": "README.md",
+      "kind": "file",
+      "bytes": 3404,
+      "sha256": "2ac2e25a791db0316ed360021797cd3f688c79ff00b0cb62053fe9654dceed14"
+    },
+    {
+      "file": "Resources/AppIcon.icns",
+      "kind": "file",
+      "bytes": 62035,
+      "sha256": "06c3a6615f098969599e87904fa96670b3e0cec05bfbba2b952024872108d57c"
+    },
+    {
+      "file": "Sources/CSQLite/module.modulemap",
+      "kind": "file",
+      "bytes": 68,
+      "sha256": "e8404cc1865dd725028e71d56d067f9cacf84154490c59571e47df1f49063418"
+    },
+    {
+      "file": "Sources/CSQLite/shim.h",
+      "kind": "file",
+      "bytes": 21,
+      "sha256": "b052d8e561e942f97b503033ecd2eaa2b35213bdbf374983efe9e68eabdfc024"
+    },
+    {
+      "file": "Sources/MPVBridge/MPVBridge.m",
+      "kind": "file",
+      "bytes": 10460,
+      "sha256": "f804e67bb7125f872693590efcc82c9f8c9e0c2a770c6cb556d2a16fa3b2679c"
+    },
+    {
+      "file": "Sources/MPVBridge/include/MPVBridge.h",
+      "kind": "file",
+      "bytes": 747,
+      "sha256": "394e44760b23682ab0cc7b1f51ac72421838c98da36c2dcbeca14ac2be6499f3"
+    },
+    {
+      "file": "Sources/PlayerCore/BiliClient.swift",
+      "kind": "file",
+      "bytes": 14336,
+      "sha256": "25d364a404d44d7ea18be31851e98011b9fe4c4976f7ff205396cabdf8e648ef"
+    },
+    {
+      "file": "Sources/PlayerCore/DanmakuParser.swift",
+      "kind": "file",
+      "bytes": 6549,
+      "sha256": "92b9e930825019c1133c27ee40aa48aa4a7a0bd88ba8970202bde14b699dd1af"
+    },
+    {
+      "file": "Sources/PlayerCore/LibraryStore.swift",
+      "kind": "file",
+      "bytes": 4278,
+      "sha256": "2e4907c94503eac8c98b4cfb20192e85a5849b3c6961812d745f4d4e33bd69a7"
+    },
+    {
+      "file": "Sources/PlayerCore/MediaScanner.swift",
+      "kind": "file",
+      "bytes": 7238,
+      "sha256": "3172e8f7b59ce8a108c4e3f509eab66c239403dce8f8d86ac0917fdfea434335"
+    },
+    {
+      "file": "Sources/PlayerCore/Models.swift",
+      "kind": "file",
+      "bytes": 6124,
+      "sha256": "13009d84f21d11bbaf87d331dbe8c959cdc750b8bd57a75ceee444ade444f4f8"
+    },
+    {
+      "file": "Sources/PlayerCore/PlaybackClock.swift",
+      "kind": "file",
+      "bytes": 1316,
+      "sha256": "17ff93241d4164bfaf94f646f9c4fc4b10934f019c66260f747eaf895b642b25"
+    },
+    {
+      "file": "Sources/PlayerCore/WbiSigning.swift",
+      "kind": "file",
+      "bytes": 1466,
+      "sha256": "a3ad9df5c4a99a2481fdaaac296e2755a559178bd82be6128a7a32399385e0aa"
+    },
+    {
+      "file": "Sources/PlayerUI/AcceptanceDriver.swift",
+      "kind": "file",
+      "bytes": 14307,
+      "sha256": "c2f067fa32f0fcaf4a25d24a0bb9f74487ff282201c1b754bf4a748c71ee4f6f"
+    },
+    {
+      "file": "Sources/PlayerUI/AppModel.swift",
+      "kind": "file",
+      "bytes": 7035,
+      "sha256": "22d2ed8897c95b6182a5eb8f4ecb5171d4adc0490df5f0a3ba5165b28dd364eb"
+    },
+    {
+      "file": "Sources/PlayerUI/DanmakuPlayerApp.swift",
+      "kind": "file",
+      "bytes": 3419,
+      "sha256": "3c12cf78a25fe2d1c04902c0e9fe17639c038dfac071186b4a1b9af7e76f7ab9"
+    },
+    {
+      "file": "Sources/PlayerUI/LibraryView.swift",
+      "kind": "file",
+      "bytes": 10578,
+      "sha256": "b265e0a2a088876c1c19f629cdb1ebc5da6fc24e138efd5e6a371a27da40c6a6"
+    },
+    {
+      "file": "Sources/PlayerUI/PlayerSession.swift",
+      "kind": "file",
+      "bytes": 10611,
+      "sha256": "78ff151c697bdc89623d56c94188d1a06547b15b388d257deffb1ae0ccbe5fe2"
+    },
+    {
+      "file": "Sources/PlayerUI/PlayerView.swift",
+      "kind": "file",
+      "bytes": 16376,
+      "sha256": "00766f54bf1c77e6b69ceafdc25382ec513b69369575301222d70e7e41b333af"
+    },
+    {
+      "file": "Sources/PlayerUI/RenderCadenceProbe.swift",
+      "kind": "file",
+      "bytes": 1438,
+      "sha256": "22169de92551dbc244c3bec483ba7c790a6fe7c3a0650fcf45d80c8654fc8d3f"
+    },
+    {
+      "file": "Sources/PlayerUI/SourceSheet.swift",
+      "kind": "file",
+      "bytes": 6871,
+      "sha256": "1da5c16dbb6bef8cd77c4f4b5cd3d837cf4685dd39be427ab655a1e055ad1c9c"
+    },
+    {
+      "file": "Tests/PlayerCoreTests/CoreTests.swift",
+      "kind": "file",
+      "bytes": 17345,
+      "sha256": "fe7b6fe541230fa57f69166badab14262f32aab6985a7a69df43a8dcfe6ed2d0"
+    },
+    {
+      "file": "Vendor/include/mpv/client.h",
+      "kind": "file",
+      "bytes": 85973,
+      "sha256": "3c073236a09cb456c6e80587d5523c8771c32fb22ca014e0f99cc3d43905b75c"
+    },
+    {
+      "file": "Vendor/include/mpv/render.h",
+      "kind": "file",
+      "bytes": 34271,
+      "sha256": "192691941602052f00df0587f126246c48785a1cf21de68d22a92ea1908d1c55"
+    },
+    {
+      "file": "Vendor/include/mpv/render_gl.h",
+      "kind": "file",
+      "bytes": 7328,
+      "sha256": "48662c0ed9872a14dd9e1684105c97f69f94a0414709c254c5d372adc41d2e69"
+    },
+    {
+      "file": "Vendor/lib/libSvtAv1Enc.4.dylib",
+      "kind": "file",
+      "bytes": 12150192,
+      "sha256": "21358d12eecae3641309b75fe975f43877f553f021336f00bfd778baea07677a"
+    },
+    {
+      "file": "Vendor/lib/libarchive.13.dylib",
+      "kind": "file",
+      "bytes": 1695040,
+      "sha256": "165487c974c5efc2b69c4bc12146dff08946a35a3317eb41edeb5136602b0194"
+    },
+    {
+      "file": "Vendor/lib/libass.9.dylib",
+      "kind": "file",
+      "bytes": 593696,
+      "sha256": "385327eb1bbdcf66a27766877152fa42504b01131538452551f79cdd9bf1c25d"
+    },
+    {
+      "file": "Vendor/lib/libavcodec.63.dylib",
+      "kind": "file",
+      "bytes": 29230000,
+      "sha256": "d98f24551401345af8b70d0a7e82e34f5917a904ba288c9d6fb252da256c4c27"
+    },
+    {
+      "file": "Vendor/lib/libavdevice.63.dylib",
+      "kind": "file",
+      "bytes": 231216,
+      "sha256": "585456f5ea5e77319a8b2a2374fa099f534f50d0a76d150e7234c9a53aefeab3"
+    },
+    {
+      "file": "Vendor/lib/libavfilter.12.dylib",
+      "kind": "file",
+      "bytes": 9435024,
+      "sha256": "faaacb68edf32ab220db7a1699250c80c50a5e35ce34cb04eea3e37b1ea366e4"
+    },
+    {
+      "file": "Vendor/lib/libavformat.63.dylib",
+      "kind": "file",
+      "bytes": 5265568,
+      "sha256": "7bea02c5152e02679fbe62bdb12211e2a5ee9da958094fc988595062d5139916"
+    },
+    {
+      "file": "Vendor/lib/libavutil.61.dylib",
+      "kind": "file",
+      "bytes": 1643552,
+      "sha256": "6311eb779f2ec47c19ce9ad3f2b1af0d10dcaf0d1da075f81889c7fcf5dc0784"
+    },
+    {
+      "file": "Vendor/lib/libbluray.3.dylib",
+      "kind": "file",
+      "bytes": 819728,
+      "sha256": "2a545461c36da2658d9939b7a6d6ffe2d1d769631970f448463b42926f6412a4"
+    },
+    {
+      "file": "Vendor/lib/libbrotlicommon.1.dylib",
+      "kind": "file",
+      "bytes": 397120,
+      "sha256": "a71803360a5b0cbd0d8a60bda5898c4b8f69dbbcf06c3a33b2c21bd14f34c2af"
+    },
+    {
+      "file": "Vendor/lib/libbrotlidec.1.dylib",
+      "kind": "file",
+      "bytes": 202432,
+      "sha256": "01ee58567612b9ff3698c9519f5ebaacea7c0ac32f41c094cd9296bb7e538b61"
+    },
+    {
+      "file": "Vendor/lib/libbrotlienc.1.dylib",
+      "kind": "file",
+      "bytes": 1685472,
+      "sha256": "524bfd7921408f51a6cad118878dce862d5d266fc3e297edce866dae9abea7d5"
+    },
+    {
+      "file": "Vendor/lib/libbs2b.0.dylib",
+      "kind": "file",
+      "bytes": 137200,
+      "sha256": "f55b3c1db0b83473ee2ac53e17fcb61f39a6dc08d542a3c9dd9395b5cd7edfc9"
+    },
+    {
+      "file": "Vendor/lib/libdav1d.7.dylib",
+      "kind": "file",
+      "bytes": 3284432,
+      "sha256": "63d42c73ec99d9f0b95b8c90e7891b92f5f4d62dff9ed00b03773f3f298b4087"
+    },
+    {
+      "file": "Vendor/lib/libfontconfig.1.dylib",
+      "kind": "file",
+      "bytes": 814368,
+      "sha256": "5d7c2438c10042bd70bbaafb9a2bcf1fa41f016d01760a0af93bbbcf2ceac7dd"
+    },
+    {
+      "file": "Vendor/lib/libfreetype.6.dylib",
+      "kind": "file",
+      "bytes": 1533936,
+      "sha256": "4f0e821b7934c42772e5df5c4c4eea8a548cd2a6fb7321f8cf3e16ebbe073bb5"
+    },
+    {
+      "file": "Vendor/lib/libfribidi.0.dylib",
+      "kind": "file",
+      "bytes": 351280,
+      "sha256": "7bd7d239c59f860b621cef0fe634a8bad0fd34ec7c29ce5f1ce5479b6a1c1e85"
+    },
+    {
+      "file": "Vendor/lib/libharfbuzz.0.dylib",
+      "kind": "file",
+      "bytes": 2936832,
+      "sha256": "e7995a49bb842cc4ebeeaa3e743192a625b87ec20a53038e899be9c05eeb7392"
+    },
+    {
+      "file": "Vendor/lib/libjpeg.62.dylib",
+      "kind": "file",
+      "bytes": 1616688,
+      "sha256": "79b1577e88e5c8586c6a637b125f0e487f6572f8994059a52e50be5b5cbc3ef3"
+    },
+    {
+      "file": "Vendor/lib/libjxl.0.11.dylib",
+      "kind": "file",
+      "bytes": 6422800,
+      "sha256": "32b819c41c8e62efe8e7ccc63994ac958cad5890308b31e4c64dd580072b0ca7"
+    },
+    {
+      "file": "Vendor/lib/libjxl_cms.0.11.dylib",
+      "kind": "file",
+      "bytes": 977664,
+      "sha256": "a150e6ba2dd5b43641ff60fd6f3626403bbdb8de472aa765a20a48f44465c38b"
+    },
+    {
+      "file": "Vendor/lib/libjxl_threads.0.11.dylib",
+      "kind": "file",
+      "bytes": 137552,
+      "sha256": "6f1c33b53e3fb044c21bbf0a44ab6d3c1b4aa4e406b0a2049a04de68b7efbf0f"
+    },
+    {
+      "file": "Vendor/lib/liblcms2.2.dylib",
+      "kind": "file",
+      "bytes": 863728,
+      "sha256": "879a961ad3d8ccb5966f3be371cb1437638fa6531ab6e05c71157fb3ac03cd62"
+    },
+    {
+      "file": "Vendor/lib/libluajit-5.1.2.dylib",
+      "kind": "file",
+      "bytes": 1443520,
+      "sha256": "6ea0794a97fe40c105b9680b0d51c84a7709e5d6a675b4666a481e2a8966f022"
+    },
+    {
+      "file": "Vendor/lib/liblz4.1.dylib",
+      "kind": "file",
+      "bytes": 441168,
+      "sha256": "2235516c40798abbf6b0c20220df2462c35d04b403c011fb699fa6ea9cc7d1a0"
+    },
+    {
+      "file": "Vendor/lib/libmpv.2.dylib",
+      "kind": "file",
+      "bytes": 8511472,
+      "sha256": "d85f49bfd0849cebe67c16f25efea8ba24b4e05aba47eabad60a709feb65b6aa"
+    },
+    {
+      "file": "Vendor/lib/libmpv.dylib",
+      "kind": "symlink",
+      "bytes": 14,
+      "sha256": "bef9f46c2db80ab0fcf1240adb7da098c688b66c207937befb8218cc39ba69ad"
+    },
+    {
+      "file": "Vendor/lib/libmujs.dylib",
+      "kind": "file",
+      "bytes": 863728,
+      "sha256": "c3d78dc62c4ed1522a1361969214ba6188d440149cab4a2da31de29a741364b4"
+    },
+    {
+      "file": "Vendor/lib/libogg.0.dylib",
+      "kind": "file",
+      "bytes": 170256,
+      "sha256": "ca27790f71db0118af0dde31b480ea7593ff020789964b93da8fe40d477ee794"
+    },
+    {
+      "file": "Vendor/lib/libplacebo.360.dylib",
+      "kind": "file",
+      "bytes": 1950416,
+      "sha256": "207f7153c583b9b9f1cc34f5fd9ce97f34ee3c47902a2849d8449d97e7ebe860"
+    },
+    {
+      "file": "Vendor/lib/librubberband.3.dylib",
+      "kind": "file",
+      "bytes": 1000608,
+      "sha256": "1df36ab15a328ad5d37bfe52499aec0e66f50158046723297aa740841e50c243"
+    },
+    {
+      "file": "Vendor/lib/libsharpyuv.0.dylib",
+      "kind": "file",
+      "bytes": 167984,
+      "sha256": "45956724a2e7dfd24657de09040705896b9e842851e51b746d8540131777dbce"
+    },
+    {
+      "file": "Vendor/lib/libsoxr.0.dylib",
+      "kind": "file",
+      "bytes": 551568,
+      "sha256": "dab3adc70f7b77d73e0679a46e6ad4cbba7f6d97675930f616f14ff34ec3981e"
+    },
+    {
+      "file": "Vendor/lib/libspeex.1.dylib",
+      "kind": "file",
+      "bytes": 371808,
+      "sha256": "ed2ac7b4434bcd9ccd355bd90039f7e2cd1890203d1074cd2a2e990e0dd719f4"
+    },
+    {
+      "file": "Vendor/lib/libswift_Concurrency.dylib",
+      "kind": "file",
+      "bytes": 1121504,
+      "sha256": "ea008000fa164d55e340ce3c4d4cfe37ed188575b9559e0d3c4eed82acef7089"
+    },
+    {
+      "file": "Vendor/lib/libswresample.7.dylib",
+      "kind": "file",
+      "bytes": 335056,
+      "sha256": "4f9a194256f9f534bfb005f0547f9f38462ef29238118af876a7afacefec0617"
+    },
+    {
+      "file": "Vendor/lib/libswscale.10.dylib",
+      "kind": "file",
+      "bytes": 2884352,
+      "sha256": "2b3f448d7284a5e8300374165d7fbdc3eb689203068ac343ad63117f0e49b024"
+    },
+    {
+      "file": "Vendor/lib/libuchardet.0.dylib",
+      "kind": "file",
+      "bytes": 502624,
+      "sha256": "ba01ac65b9963bf20c3bedb34c01cdb60a0ca71dae15a22b0551c4449d7da5d9"
+    },
+    {
+      "file": "Vendor/lib/libudfread.3.dylib",
+      "kind": "file",
+      "bytes": 169552,
+      "sha256": "1dd69e48808e87952d4dd3c9ea09b6408750bc12226e835a2e0d179b9d54ebea"
+    },
+    {
+      "file": "Vendor/lib/libunibreak.7.dylib",
+      "kind": "file",
+      "bytes": 422560,
+      "sha256": "cff045082a6c0febd68103df38a5d4a3ee2221051fcf721df86767ab208de4ed"
+    },
+    {
+      "file": "Vendor/lib/libvorbis.0.dylib",
+      "kind": "file",
+      "bytes": 569264,
+      "sha256": "7adee37768114b3f6457bbd97266dc59a3e2a24f8b2ae5810d92c55b04d55499"
+    },
+    {
+      "file": "Vendor/lib/libvorbisenc.2.dylib",
+      "kind": "file",
+      "bytes": 1554208,
+      "sha256": "8ae83c3a810db805453399a769e34558d29a06698cd78c7344130cb2c53f6cc0"
+    },
+    {
+      "file": "Vendor/lib/libwebp.7.dylib",
+      "kind": "file",
+      "bytes": 1201008,
+      "sha256": "c8297b3ab06eb758214dd570d4de378ae79bc2a18d999ece21f2b4ff63ff460b"
+    },
+    {
+      "file": "Vendor/lib/libwebpmux.3.dylib",
+      "kind": "file",
+      "bytes": 204304,
+      "sha256": "40471d7ceb6389393004edcd0012647f4986b2ec20f66145caea9bcd832b5e5e"
+    },
+    {
+      "file": "Vendor/lib/libzimg.2.dylib",
+      "kind": "file",
+      "bytes": 1145520,
+      "sha256": "cdfa3c0e327a15ad65a188444ed5c34c49be3cabe89397c1574eb19dbd90ab0e"
+    },
+    {
+      "file": "Vendor/lib/libzstd.1.dylib",
+      "kind": "file",
+      "bytes": 1844144,
+      "sha256": "dcbf6a9bc7a73b0808ec700ae81a5eff1e4c77ecf9e381e8306af4223e8a519b"
+    },
+    {
+      "file": "Vendor/provenance.json",
+      "kind": "file",
+      "bytes": 192,
+      "sha256": "9b243c58568eed72958f9d7a707e4be78db19c73386e9a1d1f7992d3aec3352a"
+    },
+    {
+      "file": "artifacts/build-snapshot.json",
+      "kind": "file",
+      "bytes": 10281,
+      "sha256": "f38562b93ffc14a9ac17301ca2ea4f936cbd41d5485e368917e8741cc90e8043"
+    },
+    {
+      "file": "artifacts/fixture-manifest.json",
+      "kind": "file",
+      "bytes": 1755,
+      "sha256": "28a2f0918d559b4006112eb84a8e22ae69fe95ec01677f4177bd32c4247c32e0"
+    },
+    {
+      "file": "artifacts/fixtures/4k.mp4",
+      "kind": "file",
+      "bytes": 27879221,
+      "sha256": "6fc6f0d8c8962a511f1777960ed5dc3f62a8f64f92175d4f39f729ca62e9f3c2"
+    },
+    {
+      "file": "artifacts/fixtures/broken.mkv",
+      "kind": "file",
+      "bytes": 12,
+      "sha256": "d927161f154e0723b73f9de93809c63150536db7424f1e566b98788f40c3d1c6"
+    },
+    {
+      "file": "artifacts/fixtures/h264.mp4",
+      "kind": "file",
+      "bytes": 28577111,
+      "sha256": "ca9e97e8718ad49ec14f8d5bb75c43b6c4ae1797f15421e56a9baac96526d39e"
+    },
+    {
+      "file": "artifacts/fixtures/hevc.mov",
+      "kind": "file",
+      "bytes": 2364988,
+      "sha256": "480f0041fb581525f4da2b923a35fabedc5fb88edb06f2e9c7a76683af566f91"
+    },
+    {
+      "file": "artifacts/fixtures/mpeg4.avi",
+      "kind": "file",
+      "bytes": 7840644,
+      "sha256": "09e67a244100ad5ff72fcf3b8ac6c24902efaecf74e5ee0fb0fcffe0ee735dea"
+    },
+    {
+      "file": "artifacts/fixtures/stress.xml",
+      "kind": "file",
+      "bytes": 114787,
+      "sha256": "7a243e48c8796e906a033b2f36da55e5da21da396e4624512a5f2f89a03db167"
+    },
+    {
+      "file": "artifacts/fixtures/test.ass",
+      "kind": "file",
+      "bytes": 589,
+      "sha256": "bbaad27d6d6e16000dd73a9a3f3d54efa0acb234b1a38da94c4d2a7857b3b41b"
+    },
+    {
+      "file": "artifacts/fixtures/vp9.webm",
+      "kind": "file",
+      "bytes": 1501868,
+      "sha256": "89139d257b0e798a93c8d7ee88d95fbd535a5cb5a829999c8274da5858ed1732"
+    },
+    {
+      "file": "artifacts/fixtures/播放测试.2026.S01E01.mkv",
+      "kind": "file",
+      "bytes": 28747518,
+      "sha256": "58895e14ca93f5446ef26306364be1a93ff251c1bbee2f2ff8dd61d7107b7ec9"
+    },
+    {
+      "file": "artifacts/fixtures/播放测试.2026.S01E01.nfo",
+      "kind": "file",
+      "bytes": 194,
+      "sha256": "891f814f5ed106de38b9bd166199a9572a551f28a90fa8c1bda04ef81f81d419"
+    },
+    {
+      "file": "artifacts/fixtures/播放测试.2026.S01E01.srt",
+      "kind": "file",
+      "bytes": 113,
+      "sha256": "189bb79e924ae433598530c5784cbd5827707c4a6ef0ccf94e3ce66af6117d78"
+    },
+    {
+      "file": "docs/ACCEPTANCE_CHECKLIST.md",
+      "kind": "file",
+      "bytes": 5743,
+      "sha256": "8b28f54591c17055138d0516e6b1cb3f9122e30427e096fdcb10274928aa16fb"
+    },
+    {
+      "file": "docs/BUILD4.md",
+      "kind": "file",
+      "bytes": 1951,
+      "sha256": "03d5f2212fef6caf2a8e300a23943b1ef205d6b055bab7628363e7eb3f15cd49"
+    },
+    {
+      "file": "docs/BUILD5.md",
+      "kind": "file",
+      "bytes": 1449,
+      "sha256": "e727c9578d7bc64f638066b2c67af50defc26fd43a389cf93516651cdab0e929"
+    },
+    {
+      "file": "docs/BUILD6.md",
+      "kind": "file",
+      "bytes": 1492,
+      "sha256": "26fe69cf2a08a0e6c7a92a6a1d45751892064ed80dd98f5156f179022a798295"
+    },
+    {
+      "file": "docs/BUILD7.md",
+      "kind": "file",
+      "bytes": 1801,
+      "sha256": "0c5af0fc9de0eee9c2a0b1bb90f1f3b34270fb2113002a0012fd581631c7d333"
+    },
+    {
+      "file": "docs/BUILD8.md",
+      "kind": "file",
+      "bytes": 4817,
+      "sha256": "b859c2904ac0e7a8ffb9d5bcbee2f0a77f0ef0c59598feec627ddb9f55ae28b0"
+    },
+    {
+      "file": "docs/BUILD9.md",
+      "kind": "file",
+      "bytes": 2636,
+      "sha256": "1f1d640c228522ea5f5d480db81ee78f205c2d7013d012e7537abcb19f7a75cb"
+    },
+    {
+      "file": "docs/FORMATS.md",
+      "kind": "file",
+      "bytes": 3316,
+      "sha256": "fb58d4dca4f3d131503fa034e9f94ac30736c5501ee09e8273b676210a4a5f9d"
+    },
+    {
+      "file": "docs/INSTALL.md",
+      "kind": "file",
+      "bytes": 2527,
+      "sha256": "1ce9695afaeb89a6335a9e65979d39c415488bd4e4f237fcadcd7eb9a1631788"
+    },
+    {
+      "file": "docs/THIRD_PARTY.md",
+      "kind": "file",
+      "bytes": 3328,
+      "sha256": "272258ab47376e63ae69d3428a814e783ea19dcff194dd57d159c1e87ba098b3"
+    },
+    {
+      "file": "docs/VERIFICATION.md",
+      "kind": "file",
+      "bytes": 13858,
+      "sha256": "882bfa0546f006b2a46d44c6ff3968853c54d066dffb5156c7d2c8113b9bba92"
+    },
+    {
+      "file": "scripts/acceptance_result.py",
+      "kind": "file",
+      "bytes": 1221,
+      "sha256": "272b3717c73672fea74e609ed14736193736b14417821382a69de2b9dcfd561c"
+    },
+    {
+      "file": "scripts/build-local.py",
+      "kind": "file",
+      "bytes": 2009,
+      "sha256": "59914c8f1920d071ec3b8ffe3415e2fb763be8a1b71a2cf2af58362b2f4e1a16"
+    },
+    {
+      "file": "scripts/check-bundle.py",
+      "kind": "file",
+      "bytes": 2052,
+      "sha256": "3030183b1b0cd0dd611705af55ede66b35c087ef294fb47da364b282575d2f6f"
+    },
+    {
+      "file": "scripts/dmg.py",
+      "kind": "file",
+      "bytes": 914,
+      "sha256": "ef08704ada3d6945ab7b816d7b6cd263e13c9fd40ba3d2b7d535dc36103d3980"
+    },
+    {
+      "file": "scripts/fetch-deps.py",
+      "kind": "file",
+      "bytes": 1652,
+      "sha256": "828b004defdadee11891721ff365c60606c9ef2d42bfd065a054181ce1adc6f2"
+    },
+    {
+      "file": "scripts/generate-fixtures.py",
+      "kind": "file",
+      "bytes": 1627,
+      "sha256": "8bff9d21ecb335e5dede1efca0b96aef7a6ba3be0986f544d0391ff5d175aeea"
+    },
+    {
+      "file": "scripts/icon.swift",
+      "kind": "file",
+      "bytes": 997,
+      "sha256": "8cb28f2d4853e5df0db77c31b1c49bab2b344ada9ebd341586ad58504d8af236"
+    },
+    {
+      "file": "scripts/package.py",
+      "kind": "file",
+      "bytes": 3829,
+      "sha256": "389efa69727ae5f34fb3b9437191121dc8191e9b89315f0550e9190ee866a711"
+    },
+    {
+      "file": "scripts/run-acceptance.py",
+      "kind": "file",
+      "bytes": 3459,
+      "sha256": "250efc5b049ff1ca45d9a601bdc7cde67d0b60de591d1015bab36face0dd1161"
+    },
+    {
+      "file": "scripts/seed-large-library.py",
+      "kind": "file",
+      "bytes": 1748,
+      "sha256": "38b351dde77e364151d4d10323442cdfd9b63c8c80f16c21a31eaf7f95d886a8"
+    },
+    {
+      "file": "scripts/summarize-validation.py",
+      "kind": "file",
+      "bytes": 1689,
+      "sha256": "e921fb080c4665ce5103f2310a5293ddb6edd42f050901d735ab131996f0a8fe"
+    }
+  ]
+}

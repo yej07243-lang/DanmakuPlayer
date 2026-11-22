@@ -1,0 +1,8 @@
+.build/
+Vendor/
+dist/
+artifacts/
+.DS_Store
+
+DanmakuPlayer-*-GPL-source.zip
+SOURCE_PACKAGE_SHA256.txt
