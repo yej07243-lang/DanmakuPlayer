@@ -4,7 +4,7 @@
 
 这是原版 **0.1.0 构建 9** 的源码，不包含后来已撤销的新版本改动。
 
-macOS 原生本地媒体库与 B 站弹幕播放器。支持普通投稿和可公开解析的番剧单集链接。当前为 **0.1.0 本地验证版本**，公开发布需通过全部验收、依赖源码分发检查及 Developer ID 公证。
+macOS 原生本地媒体库与 B 站弹幕播放器。支持普通投稿和可公开解析的番剧单集链接。当前为 **0.1.0 构建 9**，提供 Apple Silicon 直接下载版；该版已 Developer ID 签名、按所有者决定跳过 Apple 公证。
 
 ## 构建
 
@@ -42,6 +42,6 @@ B 站第三方接口可能访问受限，部分视频只返回部分弹幕；获
 
 首版手动更新。当前没有已发布的远端版本源或自动更新服务。退出播放器，备份数据，从可信渠道取得新版本，替换 Applications 内应用。不要把本地版本查看功能理解为联网更新检查。
 
-安装与恢复见 `docs/INSTALL.md`；实测证据及未完成项见 `docs/VERIFICATION.md` 和 `docs/ACCEPTANCE_CHECKLIST.md`；支持矩阵见 `docs/FORMATS.md`；依赖发布门槛见 `docs/THIRD_PARTY.md`。
+安装与恢复见 `docs/INSTALL.md`；当前安装包、校验值与发布说明见 [GitHub Releases](https://github.com/yej07243-lang/DanmakuPlayer/releases)。实测证据及未完成项见 `docs/VERIFICATION.md` 和 `docs/ACCEPTANCE_CHECKLIST.md`；支持矩阵见 `docs/FORMATS.md`；依赖发布说明见 `docs/THIRD_PARTY.md`。
 
-开源准备与分发待办见 [OPEN_SOURCE_RELEASE.md](OPEN_SOURCE_RELEASE.md)。源码授权完成不等于安装包已通过公证、依赖对应源码核查或三轮完整验收。
+开源准备与分发说明见 [OPEN_SOURCE_RELEASE.md](OPEN_SOURCE_RELEASE.md)。源码授权完成不等于安装包已公证、依赖对应源码已逐字复现或三轮完整验收已完成。

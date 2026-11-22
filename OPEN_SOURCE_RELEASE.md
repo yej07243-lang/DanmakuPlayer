@@ -6,6 +6,6 @@ LICENSE 保存 GPLv3 完整文本；COPYRIGHT 明确选择 GPLv3 或更新版本
 
 本开源包不携带第三方 dylib。构建脚本保留原版固定下载地址与 SHA-256；依赖源码不能用任意相近版本替代。已整理 30 份依赖源码归档、补丁和构建选项；直接比较确认 44 个库中 43 个的可执行代码段与固定参考包相同，mpv 的精确生产源码对应仍待确认，见 [依赖源码说明](docs/DEPENDENCY_SOURCES.md)。
 
-公开仓库：https://github.com/yej07243-lang/DanmakuPlayer 。本仓库仅发布原版应用源码；不提供未经发布核验的安装包。安装包的正式签名、公证核验及三轮完整验收没有因开源授权而自动完成，不能标记为全部发布条件已通过。
+公开仓库：https://github.com/yej07243-lang/DanmakuPlayer 。仓库发布原版应用源码，并在 GitHub Releases 提供 Developer ID 签名、未公证的 Apple Silicon 安装包及依赖源码归档。项目所有者明确选择跳过公证；下载页必须保留首次启动拦截提示。三轮完整验收没有因开源授权而自动完成。
 
 ARCHIVE-MANIFEST.json 和 ORIGINAL_SOURCE_MANIFEST.json 是历史原归档的溯源记录，不是当前公开工作树的完整性清单。许可证、README 及公开说明为本次开源整理更新；Git 提交记录当前内容。

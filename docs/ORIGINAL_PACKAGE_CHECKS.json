@@ -681,6 +681,16 @@
     }
   ],
   "threeFullAcceptanceRounds": false,
-  "notarization": "uploaded-processing",
+  "postInstallReleaseRegression": {
+    "run": 14,
+    "elapsedSeconds": 45.40473997592926,
+    "passedChecks": 31,
+    "totalChecks": 31,
+    "resourceSampleSeconds": 46.241,
+    "maxResourceGapSeconds": 2.03,
+    "playbackProgress": true
+  },
+  "developerIDSignature": true,
+  "notarization": "skipped-by-owner",
   "installedUserAppChanged": false
 }
