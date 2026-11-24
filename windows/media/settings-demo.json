@@ -1,0 +1,12 @@
+{
+  "Enabled": true,
+  "FontSize": 32,
+  "Opacity": 0.5,
+  "MaxVisible": 40,
+  "Area": 0.5,
+  "BlockedWords": "CAL-ONE",
+  "Scrolling": true,
+  "Top": true,
+  "Bottom": true,
+  "ScrollSpeed": 1.4
+}

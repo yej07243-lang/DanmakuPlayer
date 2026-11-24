@@ -1,0 +1,68 @@
+﻿<Window x:Class="DanmakuPlayerWin.BiliWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="弹幕来源与校准" Height="680" Width="860"
+        Background="{DynamicResource Bg.Panel}" WindowStartupLocation="CenterOwner" ShowInTaskbar="False">
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Foreground="{DynamicResource Text}" FontSize="12" TextWrapping="Wrap" Margin="0,0,0,10"
+                   Text="粘贴 B 站链接（视频 / 番剧 / b23.tv 短链，或只填 BV、ep、ss 编号），或用片名搜索。左边选候选，右边选分 P 或单集，确认后载入。" />
+
+        <DockPanel Grid.Row="1" Margin="0,0,0,8">
+            <Button DockPanel.Dock="Right" Content="解析链接" Width="84" Height="30" Margin="8,0,0,0" Click="OnResolveClick" />
+            <TextBox x:Name="LinkBox" Height="30" VerticalContentAlignment="Center"
+                     Background="{DynamicResource Bg.Surface}" Foreground="{DynamicResource TextPrimary}" BorderBrush="{DynamicResource BorderStrong}" Padding="6,0"
+                     TextChanged="OnLinkChanged" />
+        </DockPanel>
+
+        <DockPanel Grid.Row="2" Margin="0,0,0,10">
+            <Button DockPanel.Dock="Right" Content="搜视频" Width="76" Height="30" Margin="8,0,0,0" Click="OnSearchVideoClick" />
+            <Button DockPanel.Dock="Right" Content="搜影视" Width="76" Height="30" Margin="8,0,0,0" Click="OnSearchOfficialClick" />
+            <TextBox x:Name="SearchBox" Height="30" VerticalContentAlignment="Center"
+                     Background="{DynamicResource Bg.Surface}" Foreground="{DynamicResource TextPrimary}" BorderBrush="{DynamicResource BorderStrong}" Padding="6,0" />
+        </DockPanel>
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.15*" />
+                <ColumnDefinition Width="12" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <DockPanel Grid.Column="0">
+                <TextBlock DockPanel.Dock="Top" Text="搜索结果 / 链接解析出的候选" Foreground="{DynamicResource TextSecondary}" Margin="0,0,0,4" />
+                <ListBox x:Name="CandidateList" Background="{DynamicResource Bg.Surface}" Foreground="{DynamicResource TextPrimary}"
+                         BorderBrush="{DynamicResource Border}" FontSize="12" SelectionChanged="OnCandidateChanged" />
+            </DockPanel>
+
+            <DockPanel Grid.Column="2">
+                <TextBlock DockPanel.Dock="Top" Text="分 P / 单集" Foreground="{DynamicResource TextSecondary}" Margin="0,0,0,4" />
+                <ListBox x:Name="TargetList" Background="{DynamicResource Bg.Surface}" Foreground="{DynamicResource TextPrimary}"
+                         BorderBrush="{DynamicResource Border}" FontSize="12" SelectionChanged="OnTargetChanged" />
+            </DockPanel>
+        </Grid>
+
+        <Border Grid.Row="4" Background="{DynamicResource Bg.Card}" Padding="10,8" Margin="0,10,0,0" CornerRadius="6">
+            <TextBlock x:Name="SelectedText" Foreground="{DynamicResource Text}" FontSize="12" TextTrimming="CharacterEllipsis"
+                       Text="未选择目标" />
+        </Border>
+
+        <TextBlock Grid.Row="5" x:Name="StatusText" Foreground="{DynamicResource ErrorText}" FontSize="12" Margin="0,8,0,0" Text="" />
+
+        <DockPanel Grid.Row="6" Margin="0,12,0,0">
+            <Button Content="导入 XML…" Height="30" Padding="14,0" Margin="0,0,8,0" Click="OnImportXmlClick" />
+            <Button Content="载入弹幕" Height="30" Padding="16,0" Margin="0,0,8,0" Click="OnLoadClick" />
+            <Button Content="取消" Height="30" Padding="16,0" HorizontalAlignment="Right" Click="OnCancelClick" />
+        </DockPanel>
+    </Grid>
+</Window>
+

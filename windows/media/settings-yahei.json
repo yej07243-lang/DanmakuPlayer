@@ -1,0 +1,14 @@
+{
+  "Enabled": true,
+  "FontSize": 25,
+  "FontName": "Microsoft YaHei",
+  "Bold": false,
+  "Opacity": 0.9,
+  "MaxVisible": 60,
+  "Area": 0.65,
+  "BlockedWords": "",
+  "Scrolling": true,
+  "Top": true,
+  "Bottom": true,
+  "ScrollSpeed": 1.0
+}

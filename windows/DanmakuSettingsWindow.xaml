@@ -1,0 +1,200 @@
+<Window x:Class="DanmakuPlayerWin.DanmakuSettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="弹幕设置" Height="620" Width="480"
+        Background="{DynamicResource Bg.Panel}" WindowStartupLocation="CenterOwner" ShowInTaskbar="False">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{DynamicResource Text}" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+        </Style>
+        <Style TargetType="Slider">
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="8,0,8,0" />
+        </Style>
+        <Style TargetType="CheckBox">
+            <Setter Property="Foreground" Value="{DynamicResource Text}" />
+            <Setter Property="Margin" Value="0,0,16,0" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="28" />
+            <Setter Property="Padding" Value="10,0" />
+            <Setter Property="Margin" Value="0,0,6,0" />
+        </Style>
+        <Style TargetType="TabItem">
+            <Setter Property="Foreground" Value="{DynamicResource Text}" />
+            <Setter Property="Background" Value="{DynamicResource Bg.Surface}" />
+            <Setter Property="Padding" Value="14,6" />
+        </Style>
+        <Style TargetType="TabControl">
+            <Setter Property="Background" Value="{DynamicResource Bg.Panel}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource Border}" />
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="14">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TabControl x:Name="Tabs" Grid.Row="0">
+            <TabItem Header="显示">
+                <Grid Margin="14">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,12">
+                        <TextBlock Text="字体" Width="86" />
+                        <ComboBox x:Name="FontBox" Width="190" Height="28" SelectionChanged="OnFontChanged" />
+                        <CheckBox x:Name="BoldCheck" Content="粗体" Margin="12,0,0,0" Click="OnBoldChanged" />
+                    </StackPanel>
+
+                    <Grid Grid.Row="1" Margin="0,0,0,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="86" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="52" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="字号" />
+                        <Slider Grid.Column="1" x:Name="FontSlider" Minimum="16" Maximum="40" TickFrequency="1" ValueChanged="OnSliderChanged" AutomationProperties.Name="弹幕字号" />
+                        <TextBlock Grid.Column="2" x:Name="FontValue" TextAlignment="Right" />
+                    </Grid>
+
+                    <Grid Grid.Row="2" Margin="0,0,0,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="86" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="52" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="透明度" />
+                        <Slider Grid.Column="1" x:Name="OpacitySlider" Minimum="0.2" Maximum="1" ValueChanged="OnSliderChanged" AutomationProperties.Name="弹幕透明度" />
+                        <TextBlock Grid.Column="2" x:Name="OpacityValue" TextAlignment="Right" />
+                    </Grid>
+
+                    <Grid Grid.Row="3" Margin="0,0,0,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="86" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="52" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="显示区域" />
+                        <Slider Grid.Column="1" x:Name="AreaSlider" Minimum="0.25" Maximum="1" ValueChanged="OnSliderChanged" AutomationProperties.Name="弹幕显示区域" />
+                        <TextBlock Grid.Column="2" x:Name="AreaValue" TextAlignment="Right" />
+                    </Grid>
+
+                    <Grid Grid.Row="4" Margin="0,0,0,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="86" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="52" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="滚动速度" />
+                        <Slider Grid.Column="1" x:Name="SpeedSlider" Minimum="0.5" Maximum="2" TickFrequency="0.05" ValueChanged="OnSliderChanged" AutomationProperties.Name="弹幕滚动速度" />
+                        <TextBlock Grid.Column="2" x:Name="SpeedValue" TextAlignment="Right" />
+                    </Grid>
+
+                    <Grid Grid.Row="5" Margin="0,0,0,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="86" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="52" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="同屏上限" />
+                        <Slider Grid.Column="1" x:Name="MaxVisibleSlider" Minimum="8" Maximum="160" TickFrequency="8"
+                                IsSnapToTickEnabled="True" ValueChanged="OnSliderChanged" AutomationProperties.Name="同屏弹幕上限" />
+                        <TextBlock Grid.Column="2" x:Name="MaxVisibleValue" TextAlignment="Right" />
+                    </Grid>
+
+                    <StackPanel Grid.Row="6" Orientation="Horizontal" Margin="0,4,0,10">
+                        <CheckBox x:Name="ScrollingCheck" Content="滚动" Click="OnModeChanged" />
+                        <CheckBox x:Name="TopCheck" Content="顶部" Click="OnModeChanged" />
+                        <CheckBox x:Name="BottomCheck" Content="底部" Click="OnModeChanged" />
+                    </StackPanel>
+
+                    <DockPanel Grid.Row="7">
+                        <TextBlock DockPanel.Dock="Top" Text="屏蔽词（每行一个，包含即屏蔽）" Margin="0,0,0,6" />
+                        <TextBox x:Name="BlockedBox" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"
+                                 Background="{DynamicResource Bg.Surface}" Foreground="{DynamicResource TextPrimary}" BorderBrush="{DynamicResource BorderStrong}" Padding="6"
+                                 LostFocus="OnBlockedChanged" />
+                    </DockPanel>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="时间校准">
+                <Grid Margin="14">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" x:Name="CalibrationStatus" Margin="0,0,0,10" />
+
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,10">
+                        <Button Content="−0.5 秒 · 弹幕更早出现" Click="OnOffsetEarlierClick" />
+                        <Button Content="+0.5 秒 · 弹幕更晚出现" Click="OnOffsetLaterClick" />
+                    </StackPanel>
+
+                    <DockPanel Grid.Row="2" Margin="0,0,0,12">
+                        <TextBlock DockPanel.Dock="Left" Text="整体延后（秒）" Width="110" />
+                        <Button DockPanel.Dock="Right" Content="应用" Width="64" Click="OnApplyOffsetClick" />
+                        <TextBox x:Name="OffsetBox" Width="110" Height="28" HorizontalAlignment="Left"
+                                 Background="{DynamicResource Bg.Surface}" Foreground="{DynamicResource TextPrimary}" BorderBrush="{DynamicResource BorderStrong}"
+                                 VerticalContentAlignment="Center" Padding="6,0" ToolTip="正数让弹幕更晚出现，例如 12.5" />
+                    </DockPanel>
+
+                    <ListBox Grid.Row="3" x:Name="AnchorList" Background="{DynamicResource Bg.Surface}" Foreground="{DynamicResource TextPrimary}"
+                             BorderBrush="{DynamicResource Border}" FontSize="12" />
+
+                    <DockPanel Grid.Row="4" Margin="0,10,0,0">
+                        <TextBlock DockPanel.Dock="Left" Text="此处对应 B 站" Width="92" />
+                        <Button DockPanel.Dock="Right" Content="用当前播放位置加锚点" Width="170" Click="OnAddAnchorClick" />
+                        <TextBox x:Name="BiliTimeBox" Width="110" Height="28" HorizontalAlignment="Left"
+                                 Background="{DynamicResource Bg.Surface}" Foreground="{DynamicResource TextPrimary}" BorderBrush="{DynamicResource BorderStrong}"
+                                 VerticalContentAlignment="Center" Padding="6,0" ToolTip="支持 12:34.5、1:02:03 或 754.5" />
+                    </DockPanel>
+
+                    <DockPanel Grid.Row="5" Margin="0,10,0,0">
+                        <Button Content="删除选中" Click="OnRemoveAnchorClick" />
+                        <Button Content="清空锚点" Click="OnClearAnchorsClick" />
+                        <TextBlock x:Name="StanceText" Foreground="{DynamicResource TextSecondary}" Margin="8,0,0,0"
+                                   Text="两边暂停在同一画面再打点；至少两个锚点才有意义。" />
+                    </DockPanel>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="来源与缓存">
+                <StackPanel Margin="14">
+                    <TextBlock x:Name="SourceStatus" Margin="0,0,0,12" />
+                    <Button Content="载入本地 XML…" Margin="0,0,0,8" Click="OnLoadXmlClick" HorizontalAlignment="Left" Width="180" />
+                    <Button Content="从 B 站链接 / 搜索…" Margin="0,0,0,8" Click="OnBiliClick" HorizontalAlignment="Left" Width="180" />
+                    <Button Content="刷新 B 站弹幕" Margin="0,0,0,8" Click="OnRefreshBiliClick" HorizontalAlignment="Left" Width="180" />
+                    <Button Content="清除弹幕缓存" Margin="0,0,0,12" Click="OnClearCacheClick" HorizontalAlignment="Left" Width="180" />
+                    <TextBlock Foreground="{DynamicResource TextSecondary}"
+                               Text="换弹幕来源会重置这个视频的校准锚点。刷新失败时会保留原有缓存，也可以改用本地 XML。" />
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+
+        <DockPanel Grid.Row="1" Margin="0,12,0,0">
+            <Button Content="恢复显示默认值" Width="130" Click="OnResetClick" />
+            <Button Content="关闭" Width="88" HorizontalAlignment="Right" Click="OnCloseClick" />
+        </DockPanel>
+    </Grid>
+</Window>
+

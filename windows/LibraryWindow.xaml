@@ -1,0 +1,224 @@
+<Window x:Class="DanmakuPlayerWin.LibraryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:lib="clr-namespace:DanmakuPlayerWin.Library"
+        Title="DanmakuPlayer 媒体库" Height="820" Width="1320"
+        Background="{DynamicResource Bg.Window}" WindowStartupLocation="CenterScreen"
+        AllowDrop="True" Drop="OnDrop" DragOver="OnDragOver"
+        PreviewKeyDown="OnPreviewKeyDown" SizeChanged="OnWindowSizeChanged">
+    <Window.Resources>
+        <lib:PathToImageConverter x:Key="PathToImage" />
+        <lib:MissingArtworkConverter x:Key="MissingArtwork" />
+        <BooleanToVisibilityConverter x:Key="BoolToVis" />
+        <ItemsPanelTemplate x:Key="WrapPanelTemplate">
+            <WrapPanel />
+        </ItemsPanelTemplate>
+        <ItemsPanelTemplate x:Key="GroupPanelTemplate">
+            <StackPanel />
+        </ItemsPanelTemplate>
+        <Style x:Key="ToolButton" TargetType="Button">
+            <Setter Property="Background" Value="{DynamicResource ButtonBg}" />
+            <Setter Property="Foreground" Value="{DynamicResource TextPrimary}" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="Padding" Value="12,0" />
+            <Setter Property="Margin" Value="0,0,8,0" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="6" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsKeyboardFocused" Value="True">
+                    <Setter Property="BorderBrush" Value="{DynamicResource Accent}" />
+                    <Setter Property="BorderThickness" Value="2" />
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Opacity" Value="0.4" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{DynamicResource Text}" />
+            <Setter Property="FontSize" Value="12" />
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="{DynamicResource Bg.Surface}" Padding="10,8">
+            <DockPanel LastChildFill="False">
+                <Button Content="导入文件夹" Style="{StaticResource ToolButton}" Click="OnImportFolderClick" />
+                <Button Content="导入文件" Style="{StaticResource ToolButton}" Click="OnImportFilesClick" />
+                <Button Content="重新扫描" Style="{StaticResource ToolButton}" Click="OnRescanClick" />
+                <TextBlock Text="搜索" Margin="8,0,6,0" VerticalAlignment="Center" />
+                <TextBox x:Name="SearchBox" Width="240" Height="28" VerticalContentAlignment="Center"
+                         Background="{DynamicResource Bg.Window}" Foreground="{DynamicResource TextPrimary}" BorderBrush="#3A3A3A"
+                         TextChanged="OnSearchChanged" />
+                <TextBlock Text="排序" Margin="12,0,6,0" VerticalAlignment="Center" />
+                <ComboBox x:Name="SortBox" Width="120" Height="28" SelectionChanged="OnSortChanged">
+                    <ComboBoxItem Content="标题" IsSelected="True" />
+                    <ComboBoxItem Content="最近播放" />
+                </ComboBox>
+                <Button Content="导出日志" Style="{StaticResource ToolButton}" Margin="14,0,0,0" Click="OnExportLogsClick" />
+                <Button Content="数据目录" Style="{StaticResource ToolButton}" Margin="6,0,0,0" Click="OnOpenDataDirectoryClick" />
+                <Button Content="设置" Style="{StaticResource ToolButton}" Margin="6,0,0,0" Click="OnSettingsClick" />
+                <Button Content="关于" Style="{StaticResource ToolButton}" Margin="6,0,0,0" Click="OnAboutClick" />
+                <Button x:Name="InspectorToggle" Content="收起详情" Style="{StaticResource ToolButton}" Margin="6,0,0,0" Click="OnToggleInspectorClick" />
+                <TextBlock x:Name="CountText" Margin="16,0,0,0" VerticalAlignment="Center" Foreground="{DynamicResource TextSecondary}" />
+            </DockPanel>
+        </Border>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="180" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition x:Name="InspectorColumn" Width="330" />
+            </Grid.ColumnDefinitions>
+
+            <ListBox x:Name="SectionList" Grid.Column="0" Background="{DynamicResource Bg.SurfaceAlt}" Foreground="{DynamicResource Text}"
+                     BorderThickness="0" FontSize="13" SelectionChanged="OnSectionChanged">
+                <ListBoxItem Content="全部影片" IsSelected="True" Padding="12,10" />
+                <ListBoxItem Content="电影" Padding="12,10" />
+                <ListBoxItem Content="剧集" Padding="12,10" />
+                <ListBoxItem Content="继续观看" Padding="12,10" />
+                <ListBoxItem Content="文件不可用" Padding="12,10" />
+            </ListBox>
+
+            <Grid Grid.Column="1">
+            <ListBox x:Name="ItemList" Background="{DynamicResource Bg.Window}" BorderThickness="0"
+                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                     SelectionChanged="OnSelectionChanged" MouseDoubleClick="OnItemDoubleClick"
+                     PreviewMouseRightButtonDown="OnItemRightButtonDown">
+                <ListBox.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="播放" Click="OnPlayClick" />
+                        <MenuItem Header="在资源管理器中显示" Click="OnRevealClick" />
+                        <Separator />
+                        <MenuItem Header="重新定位…" Click="OnRelocateClick" />
+                        <MenuItem Header="从媒体库移除" Click="OnRemoveClick" />
+                    </ContextMenu>
+                </ListBox.ContextMenu>
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel />
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.GroupStyle>
+                    <GroupStyle Panel="{StaticResource WrapPanelTemplate}">
+                        <GroupStyle.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Name}" Foreground="{DynamicResource TextPrimary}" FontSize="14"
+                                           FontWeight="SemiBold" Margin="10,12,0,4" />
+                            </DataTemplate>
+                        </GroupStyle.HeaderTemplate>
+                    </GroupStyle>
+                </ListBox.GroupStyle>
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="ListBoxItem">
+                        <Setter Property="Padding" Value="0" />
+                        <Setter Property="Margin" Value="0" />
+                        <Setter Property="Background" Value="Transparent" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="ListBoxItem">
+                                    <Border x:Name="Chrome" Background="Transparent" CornerRadius="10" Margin="4">
+                                        <ContentPresenter />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter TargetName="Chrome" Property="Background" Value="{DynamicResource Selection}" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border Width="212" Height="312" Background="{DynamicResource Bg.Card}" CornerRadius="8"
+                                AutomationProperties.Name="{Binding Title}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="216" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Border Background="{DynamicResource Bg.CardAlt}" CornerRadius="8,8,0,0">
+                                    <Grid>
+                                        <Image Source="{Binding Artwork, Converter={StaticResource PathToImage}}" Stretch="Uniform" />
+                                        <TextBlock Text="&#xE8B2;" FontFamily="Segoe MDL2 Assets" FontSize="34" Foreground="{DynamicResource PlaceholderGlyph}"
+                                                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                   Visibility="{Binding Artwork, Converter={StaticResource MissingArtwork}}" />
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="8">
+                                            <Border Background="#B3000000" CornerRadius="4" Padding="6,2" Margin="0,0,4,0"
+                                                    Visibility="{Binding Watched, Converter={StaticResource BoolToVis}}">
+                                                <TextBlock Text="已看完" Foreground="#9BE29B" FontSize="10" />
+                                            </Border>
+                                            <Border Background="#B3000000" CornerRadius="4" Padding="6,2"
+                                                    Visibility="{Binding HasDanmaku, Converter={StaticResource BoolToVis}}">
+                                                <TextBlock Text="弹幕" Foreground="{DynamicResource Accent}" FontSize="10" />
+                                            </Border>
+                                        </StackPanel>
+                                        <ProgressBar Height="4" VerticalAlignment="Bottom" Maximum="100"
+                                                     Value="{Binding ProgressPercent, Mode=OneWay}" Foreground="{DynamicResource AccentStrong}" Background="{DynamicResource Border}"
+                                                     BorderThickness="0" AutomationProperties.Name="播放进度"
+                                                     Visibility="{Binding HasProgress, Converter={StaticResource BoolToVis}}" />
+                                    </Grid>
+                                </Border>
+                                <StackPanel Grid.Row="1" Margin="10,8,10,8">
+                                    <TextBlock Text="{Binding Title}" Foreground="{DynamicResource TextPrimary}" FontSize="13"
+                                               TextWrapping="Wrap" MaxHeight="38" TextTrimming="CharacterEllipsis" />
+                                    <TextBlock Text="{Binding SubtitleLine}" Foreground="{DynamicResource TextSecondary}" FontSize="11" Margin="0,4,0,0" />
+                                    <TextBlock Text="{Binding ProgressLine}" Foreground="{DynamicResource AccentStrong}" FontSize="11" Margin="0,2,0,0" />
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+                <StackPanel x:Name="EmptyState" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock x:Name="EmptyHint" TextWrapping="Wrap" TextAlignment="Center"
+                               MaxWidth="440" FontSize="14" Foreground="{DynamicResource TextMuted}"
+                               Text="媒体库是空的：点左上「导入文件夹」，或者把视频 / 文件夹直接拖进来。" />
+                    <Button Content="导入文件夹" Style="{StaticResource ToolButton}" Margin="0,14,0,0"
+                            HorizontalAlignment="Center" Click="OnImportFolderClick" />
+                </StackPanel>
+            </Grid>
+
+            <Border x:Name="InspectorPanel" Grid.Column="2" Background="{DynamicResource Bg.SurfaceAlt}" Padding="16">
+                <DockPanel>
+                    <StackPanel DockPanel.Dock="Top">
+                        <TextBlock x:Name="DetailTitle" Text="未选中" Foreground="{DynamicResource TextPrimary}" FontSize="18" TextWrapping="Wrap" />
+                        <TextBlock x:Name="DetailMeta" Foreground="{DynamicResource TextSecondary}" Margin="0,6,0,0" />
+                        <TextBlock x:Name="DetailSummary" Foreground="{DynamicResource Text}" Margin="0,12,0,0" TextWrapping="Wrap" />
+                        <TextBlock x:Name="DetailPath" Foreground="{DynamicResource TextMuted}" Margin="0,12,0,0" TextWrapping="Wrap" FontSize="11" />
+                        <TextBlock x:Name="DetailDanmaku" Foreground="{DynamicResource Accent}" Margin="0,10,0,0" TextWrapping="Wrap" FontSize="12" />
+                    </StackPanel>
+                    <StackPanel DockPanel.Dock="Bottom" Margin="0,16,0,0">
+                        <Button x:Name="PlayButton" Content="播放" Style="{StaticResource ToolButton}" Margin="0,0,0,8" IsEnabled="False" Click="OnPlayClick" />
+                        <Button x:Name="EditButton" Content="编辑资料…" Style="{StaticResource ToolButton}" Margin="0,0,0,8" IsEnabled="False" Click="OnEditClick" />
+                        <Button x:Name="BiliButton" Content="B 站弹幕…" Style="{StaticResource ToolButton}" Margin="0,0,0,8" IsEnabled="False" Click="OnBiliClick" />
+                        <Button x:Name="RelocateButton" Content="重新定位…" Style="{StaticResource ToolButton}" Margin="0,0,0,8" IsEnabled="False" Click="OnRelocateClick" />
+                        <Button x:Name="RemoveButton" Content="从媒体库移除" Style="{StaticResource ToolButton}" Margin="0" IsEnabled="False" Click="OnRemoveClick" />
+                    </StackPanel>
+                </DockPanel>
+            </Border>
+        </Grid>
+
+        <Border Grid.Row="2" Background="{DynamicResource Bg.Surface}" Padding="10,6">
+            <TextBlock x:Name="StatusText" Text="就绪" Foreground="{DynamicResource TextSecondary}" />
+        </Border>
+    </Grid>
+</Window>
+

@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <PlatformTarget>x64</PlatformTarget>
+    <AssemblyName>DanmakuPlayerWin</AssemblyName>
+    <RootNamespace>DanmakuPlayerWin</RootNamespace>
+    <Version>0.1.0</Version>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <Product>DanmakuPlayer for Windows</Product>
+    <AssemblyTitle>DanmakuPlayer for Windows</AssemblyTitle>
+    <Description>本地视频播放器，带 B 站弹幕、媒体库与分段校准</Description>
+    <Copyright>Copyright (C) 2026 DanmakuPlayer contributors</Copyright>
+    <LibMpvDir Condition="'$(LibMpvDir)' == ''">libmpv</LibMpvDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="$(LibMpvDir)\libmpv-2.dll" Link="libmpv-2.dll" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <None Include="LICENSE" CopyToPublishDirectory="PreserveNewest" />
+    <None Include="THIRD-PARTY-NOTICES.md" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.11" />
+  </ItemGroup>
+
+</Project>

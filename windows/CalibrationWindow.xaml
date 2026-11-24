@@ -1,0 +1,48 @@
+﻿<Window x:Class="DanmakuPlayerWin.CalibrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="弹幕校准" Height="520" Width="760"
+        Background="{DynamicResource Bg.Panel}" WindowStartupLocation="CenterOwner"
+        ShowInTaskbar="False" ResizeMode="CanResize">
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Foreground="{DynamicResource Text}" TextWrapping="Wrap" FontSize="13" Margin="0,0,0,10"
+                   Text="两版片长不同时，用锚点把 B 站时间轴分段对齐到本地时间轴。先在 B 站播放器暂停在某个画面，记住那里的时间，再回到这里暂停在同一个画面，填入 B 站时间后点「加锚点」。至少两个锚点才能修漂移。" />
+
+        <TextBlock Grid.Row="1" x:Name="PlayheadText" Foreground="{DynamicResource Accent}" FontSize="13" Margin="0,0,0,8"
+                   Text="当前位置：--" />
+
+        <ListBox Grid.Row="2" x:Name="AnchorList" Background="{DynamicResource Bg.Surface}" Foreground="{DynamicResource TextPrimary}"
+                 BorderBrush="{DynamicResource Border}" FontSize="13" />
+
+        <Grid Grid.Row="3" Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="140" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="B 站时间：" Foreground="{DynamicResource Text}" VerticalAlignment="Center" />
+            <TextBox Grid.Column="1" x:Name="BiliInput" Height="28" Margin="0,0,8,0"
+                     Background="{DynamicResource Bg.Surface}" Foreground="{DynamicResource TextPrimary}" BorderBrush="{DynamicResource BorderStrong}" VerticalContentAlignment="Center" />
+            <Button Grid.Column="2" Content="加锚点（用当前播放位置）" Height="30" Padding="12,0" Click="OnAddClick" />
+        </Grid>
+
+        <TextBlock Grid.Row="4" x:Name="ErrorText" Foreground="{DynamicResource ErrorText}" FontSize="12" Margin="0,8,0,0" Text="" />
+
+        <DockPanel Grid.Row="5" Margin="0,10,0,0">
+            <Button Content="删除选中" Height="30" Padding="12,0" Margin="0,0,8,0" Click="OnRemoveClick" />
+            <Button Content="清空锚点" Height="30" Padding="12,0" Margin="0,0,8,0" Click="OnClearClick" />
+            <Button Content="关闭" Height="30" Padding="16,0" HorizontalAlignment="Right" Click="OnCloseClick" />
+        </DockPanel>
+    </Grid>
+</Window>
+

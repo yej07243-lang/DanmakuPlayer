@@ -1,0 +1,47 @@
+﻿<Window x:Class="DanmakuPlayerWin.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="关于 DanmakuPlayer" Height="440" Width="560"
+        Background="{DynamicResource Bg.Panel}" WindowStartupLocation="CenterOwner" ShowInTaskbar="False">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{DynamicResource Text}" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,14">
+            <Image x:Name="Logo" Width="48" Height="48" />
+            <StackPanel Margin="12,0,0,0" VerticalAlignment="Center">
+                <TextBlock Text="DanmakuPlayer for Windows" Foreground="{DynamicResource TextPrimary}" FontSize="16" />
+                <TextBlock x:Name="VersionText" Text="版本 0.1.0" Foreground="{DynamicResource TextSecondary}" />
+            </StackPanel>
+        </StackPanel>
+
+        <TextBlock Grid.Row="1" Margin="0,0,0,12"
+                   Text="本地视频播放器 + B 站弹幕。视频由 libmpv 渲染，弹幕以 ASS 交给 libass 叠加，界面为 WPF。" />
+
+        <TextBlock Grid.Row="2" Margin="0,0,0,12" Foreground="{DynamicResource Accent}"
+                   Text="本程序以 GNU General Public License 第 3 版或更新版本发布，不提供任何担保。完整条款见随包的 LICENSE 文件。" />
+
+        <ScrollViewer Grid.Row="3" VerticalScrollBarVisibility="Auto">
+            <TextBlock x:Name="ComponentsText" Foreground="{DynamicResource TextSecondary}" />
+        </ScrollViewer>
+
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,14,0,0">
+            <Button Content="打开许可证" Width="100" Height="30" Margin="0,0,8,0" Click="OnOpenLicenseClick" />
+            <Button Content="关闭" Width="88" Height="30" Click="OnCloseClick" />
+        </StackPanel>
+    </Grid>
+</Window>
+

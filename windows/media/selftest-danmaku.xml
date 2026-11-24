@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<i>
+  <chatserver>chat.bilibili.com</chatserver>
+  <chatid>0</chatid>
+  <mission>0</mission>
+  <maxlimit>1500</maxlimit>
+  <state>0</state>
+  <real_name>0</real_name>
+  <source>k-v</source>
+  <d p="1.0,1,25,16777215,0,0,0,0">滚动弹幕 第一条 SCROLL A1</d>
+  <d p="1.6,1,25,16711680,0,0,0,0">红色滚动 RED 第二条</d>
+  <d p="2.2,5,25,16776960,0,0,0,0">顶部固定 TOP yellow</d>
+  <d p="2.8,4,25,65280,0,0,0,0">底部固定 BOTTOM green</d>
+  <d p="3.4,1,25,255,0,0,0,0">蓝色滚动 BLUE 第三条</d>
+  <d p="4.0,1,25,16777215,0,0,0,0">这是一条比较长的中文弹幕用来测试宽度估算和轨道分配</d>
+  <d p="4.6,6,25,16711935,0,0,0,0">逆向弹幕 REVERSE lane</d>
+  <d p="5.2,5,25,16777215,0,0,0,0">顶部固定 第二条 TOP2</d>
+  <d p="6.0,1,18,16777215,0,0,0,0">小字号弹幕 small size</d>
+  <d p="7.0,4,25,16776960,0,0,0,0">底部固定 第二条 BOTTOM2</d>
+  <d p="8.0,1,25,65535,0,0,0,0">青色滚动 CYAN 第八条</d>
+  <d p="9.0,1,25,16777215,0,0,0,0">最后一条弹幕 LAST ONE</d>
+</i>

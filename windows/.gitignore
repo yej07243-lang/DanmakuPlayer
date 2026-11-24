@@ -1,0 +1,9 @@
+bin/
+obj/
+logs/
+media/*.mp4
+*.user
+media/calibration-fixture.json
+media/local-demo-calibration.json
+artifacts/
+libmpv/

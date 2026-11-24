@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<i>
+  <chatserver>chat.bilibili.com</chatserver>
+  <chatid>0</chatid>
+  <mission>0</mission>
+  <maxlimit>1500</maxlimit>
+  <state>0</state>
+  <real_name>0</real_name>
+  <source>calibration-fixture</source>
+  <d p="100.0,5,25,16777215,0,0,0,0">校准样本一 CAL-ONE</d>
+  <d p="350.0,5,25,16776960,0,0,0,0">校准样本二 CAL-TWO</d>
+</i>

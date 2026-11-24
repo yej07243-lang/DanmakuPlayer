@@ -4,6 +4,8 @@
 
 这是原版 **0.1.0 构建 9** 的源码，不包含后来已撤销的新版本改动。
 
+> Windows 版（.NET 8 + WPF + libmpv）源码在 [`windows/`](windows/README.md)，发布包见 [Releases](../../releases?q=windows)。
+
 macOS 原生本地媒体库与 B 站弹幕播放器。支持普通投稿和可公开解析的番剧单集链接。当前为 **0.1.0 构建 9**，提供 Apple Silicon 直接下载版；该版已 Developer ID 签名、按所有者决定跳过 Apple 公证。
 
 ## 构建
