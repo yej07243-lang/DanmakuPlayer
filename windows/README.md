@@ -65,7 +65,7 @@ macOS 版「应用运行时接收 Finder 打开请求」在 Windows 上未实现
 
 ## 下载与运行
 
-到 [Releases](../../releases?q=windows) 下载 `DanmakuPlayerWin-<版本>-win-x64.zip`，解压后运行
+到 [Releases](../releases?q=windows) 下载 `DanmakuPlayerWin-<版本>-win-x64.zip`，解压后运行
 `DanmakuPlayerWin.exe`。发布包自带 .NET 运行时，不需要另外安装。
 
 首次启动是空的媒体库：点「导入文件夹」，或者把视频/文件夹拖进窗口。双击卡片开始播放。
