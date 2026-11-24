@@ -6,6 +6,8 @@
 
 > Windows 版（.NET 8 + WPF + libmpv）源码在 [`windows/`](windows/README.md)，发布包见 [Releases](releases?q=windows)。
 
+**Android 0.4.0 预览版**支持媒体库、剧集续播、libmpv 播放、外挂字幕，以及 B 站和本地 XML 弹幕。需要 Android 8.0 或更新版本。详见 [Android 版说明](android/README.md) 和 [APK 下载](https://github.com/yej07243-lang/DanmakuPlayer/releases/tag/android-v0.4.0-preview)。
+
 macOS 原生本地媒体库与 B 站弹幕播放器。支持普通投稿和可公开解析的番剧单集链接。当前为 **0.1.0 构建 9**，提供 Apple Silicon 直接下载版；该版已 Developer ID 签名、按所有者决定跳过 Apple 公证。
 
 ## 构建
